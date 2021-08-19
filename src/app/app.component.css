@@ -1,14 +1,1 @@
 
-/* 
-* {
-  margin: 30px;
-  box-sizing: border-box;
-} */
-
-.nannaBhai { 
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-
-}

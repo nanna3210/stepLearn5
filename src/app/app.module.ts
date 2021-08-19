@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PracOneComponent } from './componennts/prac-one/prac-one.component';
+import { CardComponent } from './components/card/card.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PracOneComponent
+    CardComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,15 @@
-<div class="card">
-    <div class="card-image">
-        <figure class="image is-4by3">
-            <img src="assets/tree.jpeg" alt=" Error loading Image ">
-        </figure>
-    </div>
-    <div class="card-content">
-        <div class="media-content">
-            <p class="title is-4">
-                A clean neat tree  
-            </p>
-            <p class="subtitle is-6">
-                @Nannadas
-            </p>
-            <div class="content has-text-danger">
-                Saw this tree during my hike today .... 
-            </div>
-        </div>
-    </div>
+<div class="nannaBhai">
+    
+
+<app-card *ngFor="let post of posts"
+
+    [title] = 'post.title'
+    [imageurl]= 'post.imageurl'
+    [userName] = 'post.userName'
+    [content]='post.content' >
+    
+
+</app-card>
+
+
 </div>

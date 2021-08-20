@@ -1,25 +1,82 @@
 <div class="container">
-  <div class="columns is-centered">
-    <div class="box column is-one-third">
-        <h1 class="title has-text-centered">Typing Challenne</h1>
-    <p class="has-text-centered">
-        <span *ngFor="let letter of randomText.split('') ; let i =index"
-        ><strong [class]="compare(letter, enteredText[i])">{{letter}}</strong></span>
-        <!-- {{randomText}} -->
-        <!-- ({{letter}}{{enteredText[i]}}) -->
-    </p>
-    
-    
-    
-    <div class="field">
-        <!-- <input class="input" (input)="onInput($event.target.value)"/> -->
-        <textarea  class="textarea" (input)="onInput($event.target.value)" ></textarea>
+  <div class="row ">
+    <div class="col form-group">
+      <label for="">Payee Name </label>
+      <input
+        type="text"
+        class="input form-control"
+        (input)="onChangename($event.target.value)"
+      />
     </div>
-    <div *ngIf="enteredText === randomText" class="box has-text-centered " >
-
-        <h3 class="title  has-text-primary">success</h3>
+    <div class="col">
+      <label for="">Name Is  </label>
+      <h2 class="text-danger ">{{ name | titlecase }}</h2>
     </div>
-    </div>
-
   </div>
-</div>
+  <!-- ||||||||Payment date  -->
+  <div class="row ">
+    <div class="col form-group">
+      <label for="">Payment date  </label>
+      <input
+        type="date"
+        class="input form-control"
+        (input)="onChangedate($event.target.value)"
+      />
+    </div>
+    <div class="col">
+      <label for="">payment date is   </label>
+      <h2 class="text-danger ">{{ date | date :'MMMM dd,y' }}</h2>
+    </div>
+  </div>
+  <!-- ||||||||Currency   -->
+  <div class="row ">
+    <div class="col form-group">
+      <label for="">Amount   </label>
+      <input
+        
+        class="input form-control"
+        (input)="onChangeamount($event.target.value)"
+      />
+    </div>
+    
+    <div class="col">
+      <label for="">payment Amount    </label>
+      <h2 class="text-danger ">{{ amount | currency :'INR'}}</h2>
+    </div>
+  </div>
+    <!-- ||||||||Height    -->
+    <div class="row ">
+      <div class="col form-group">
+        <label for="">Height    </label>
+        <input
+          
+          class="input form-control"
+          (input)="onChangeHeight($event.target.value)"
+        />
+      </div>
+      
+      <div class="col">
+        <label for="">height    </label>
+        <h2 class="text-danger ">{{ height | number:'2.1-3'}}</h2>
+      </div>
+    </div>
+    <!-- onChangeMiles(input :string ) -->
+
+    <!-- ||||||||||| Kilometer -->
+    <div class="row ">
+      <div class="col form-group">
+        <label for="">Miles Trvelled    </label>
+        <input
+          
+          class="input form-control"
+          (input)="onChangeMiles($event.target.value)"
+        />
+      </div>
+      
+      <!-- *ngIf="(mile |kilometer :'km') >10" if more than 10 kilometers needed -->
+      <div class="col" >
+        <label for="">in kilometers</label>
+        <h2 class="text-danger ">{{ mile | kilometer :'km' |number :'1.2-2'}}</h2>
+      </div>
+    </div>
+  </div>

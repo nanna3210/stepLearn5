@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {lorem} from 'faker';
 @Component({
   selector: 'app-root',
@@ -7,24 +7,31 @@ import {lorem} from 'faker';
 })
 export class AppComponent {
   
+  name  :string
+  date :string 
+  amount :number
+  height :number
+  mile :number
   
-  randomText = lorem.sentence()
-  enteredText = '';
   constructor() { 
 
- 
-      
   }
-   
-  onInput(input :string) {
-    this.enteredText=input;
-    
+
+  onChangename(input :string ) { 
+    this.name = input; 
   }
-  compare(randomText:string, enteredText:string) { 
-    if (!enteredText){ 
-      return "pending"
-    }
-    return (enteredText === randomText) ? 'correct':'incorrect'
-    
+
+  onChangedate(input :string ) { 
+    this.date = input; 
+  }
+  onChangeamount (input :string) { 
+      this.amount = parseFloat(input); 
+  }
+  onChangeHeight(input :string ){
+
+    this.height = parseFloat(input) 
+  }
+  onChangeMiles(input :string ) { 
+    this.mile = parseFloat(input); 
   }
 }

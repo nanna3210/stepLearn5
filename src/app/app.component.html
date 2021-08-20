@@ -4,8 +4,7 @@
         <h1 class="title has-text-centered">Typing Challenne</h1>
     <p class="has-text-centered">
         <span *ngFor="let letter of randomText.split('') ; let i =index"
-        [class]="compare(letter, enteredText[i])"
-        >{{letter}}</span>
+        ><strong [class]="compare(letter, enteredText[i])">{{letter}}</strong></span>
         <!-- {{randomText}} -->
         <!-- ({{letter}}{{enteredText[i]}}) -->
     </p>
@@ -13,11 +12,12 @@
     
     
     <div class="field">
-        <input class="input" (input)="onInput($event.target.value)"/>
+        <!-- <input class="input" (input)="onInput($event.target.value)"/> -->
+        <textarea  class="textarea" (input)="onInput($event.target.value)" ></textarea>
     </div>
-    <div *ngIf="enteredText === randomText" class="box has-text-centered">
+    <div *ngIf="enteredText === randomText" class="box has-text-centered " >
 
-        <h3 class="title ">success</h3>
+        <h3 class="title  has-text-primary">success</h3>
     </div>
     </div>
 

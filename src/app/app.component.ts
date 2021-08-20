@@ -25,5 +25,6 @@ export class AppComponent {
       return "pending"
     }
     return (enteredText === randomText) ? 'correct':'incorrect'
+    
   }
 }

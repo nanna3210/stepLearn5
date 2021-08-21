@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardComponent } from './components/card/card.component';
 import { KilometerPipe } from './pipe/kilometer.pipe';
+import { ClaassDirective } from './claass.directive';
+import { TimesDirective } from './structuralDir/times.directive';
 
 
 
@@ -13,7 +15,9 @@ import { KilometerPipe } from './pipe/kilometer.pipe';
   declarations: [
     AppComponent,
     CardComponent,
-    KilometerPipe
+    KilometerPipe,
+    ClaassDirective,
+    TimesDirective
     
   ],
   imports: [

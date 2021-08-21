@@ -1,82 +1,68 @@
-<div class="container">
-  <div class="row ">
-    <div class="col form-group">
-      <label for="">Payee Name </label>
-      <input
-        type="text"
-        class="input form-control"
-        (input)="onChangename($event.target.value)"
-      />
-    </div>
-    <div class="col">
-      <label for="">Name Is  </label>
-      <h2 class="text-danger ">{{ name | titlecase }}</h2>
-    </div>
-  </div>
-  <!-- ||||||||Payment date  -->
-  <div class="row ">
-    <div class="col form-group">
-      <label for="">Payment date  </label>
-      <input
-        type="date"
-        class="input form-control"
-        (input)="onChangedate($event.target.value)"
-      />
-    </div>
-    <div class="col">
-      <label for="">payment date is   </label>
-      <h2 class="text-danger ">{{ date | date :'MMMM dd,y' }}</h2>
-    </div>
-  </div>
-  <!-- ||||||||Currency   -->
-  <div class="row ">
-    <div class="col form-group">
-      <label for="">Amount   </label>
-      <input
-        
-        class="input form-control"
-        (input)="onChangeamount($event.target.value)"
-      />
-    </div>
+<div class="container" >
+  <nav >
     
-    <div class="col">
-      <label for="">payment Amount    </label>
-      <h2 class="text-danger ">{{ amount | currency :'INR'}}</h2>
-    </div>
-  </div>
-    <!-- ||||||||Height    -->
-    <div class="row ">
-      <div class="col form-group">
-        <label for="">Height    </label>
-        <input
-          
-          class="input form-control"
-          (input)="onChangeHeight($event.target.value)"
-        />
-      </div>
+    <ul class="pagination pagination-lg">
+      <li class="page-item"
+      [ngClass]="{disabled : currentPage ===  0}"
       
-      <div class="col">
-        <label for="">height    </label>
-        <h2 class="text-danger ">{{ height | number:'2.1-3'}}</h2>
-      </div>
-    </div>
-    <!-- onChangeMiles(input :string ) -->
+        
+      >
+        <a class="page-link" (click)="currentPage =currentPage-1" >Prev.</a>
+      </li>
+      <li class="page-item " 
+      [ngClass]="{active : i === currentPage }"
+      *ngFor="let image  of images ; let i = index"
 
-    <!-- ||||||||||| Kilometer -->
-    <div class="row ">
-      <div class="col form-group">
-        <label for="">Miles Trvelled    </label>
-        <input
-          
-          class="input form-control"
-          (input)="onChangeMiles($event.target.value)"
-        />
-      </div>
+     
+      >
+        <a   (click)="currentPage === i" class="page-link" >{{i+1}}</a>
+        
+      </li>
+      <li class="page-item "
+      [ngClass]="{disabled :currentPage===images.length}"
       
-      <!-- *ngIf="(mile |kilometer :'km') >10" if more than 10 kilometers needed -->
-      <div class="col" >
-        <label for="">in kilometers</label>
-        <h2 class="text-danger ">{{ mile | kilometer :'km' |number :'1.2-2'}}</h2>
+      >
+        <a (click)="currentPage =currentPage+1" class="page-link">next</a>
+      </li>
+      
+    </ul>
+  
+  
+  </nav>
+
+  <div>
+    <h4>{{images[currentPage].title}}</h4>
+    <img src="{{images[currentPage].imageurl}}" alt="">
+  </div>
+  
+</div>
+<h2>nanna</h2>
+    <div [ngSwitch] ="currentPage">
+      <div *ngSwitchCase= "0">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, odit.
+      </div>
+      <div *ngSwitchCase= "1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sed. 101010101010101
+      </div>
+      <div *ngSwitchCase= "2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tempora, a ipsam illo est accusantium maiores quisquam perspiciatis harum enim!
+      </div>
+      <div *ngSwitchCase= "3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe deserunt quam consectetur fuga qui tenetur numquam eum enim quis? Beatae explicabo necessitatibus dolores, praesentium placeat nam sapiente aliquam odio numquam.
+      </div>
+      <div *ngSwitchDefault>
+        Unknown page 
       </div>
     </div>
-  </div>
+
+    <h2  [appClaass]="'red'">nanna</h2>
+      <hr>
+
+
+      <ul *appTimes='7'>
+        <li>Hi there </li>
+      </ul>
+
+
+
+

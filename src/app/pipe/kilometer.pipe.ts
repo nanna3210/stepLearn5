@@ -24,26 +24,7 @@ export class KilometerPipe implements PipeTransform {
 
 
 
-      // targetunits.forEach(elements  => {
-        
-      //     console.log(elements);
-          
 
-      //   if(elements==='km'){
-      //       return value*1.60934; 
-      //     }
-      //   else if (elements ==='m') { 
-      //       return  value*1.60934*1000; 
-      //     }
-      //   else if  (elements==='cm') { 
-      //       return value*1.60934*1000*1000
-      //    }
-      //   else  { 
-      //       throw new Error("The type is not Supported  please contact nanna For this "); 
-      //     }
-      // });
-
-    // console.log(args);
     
   }
 

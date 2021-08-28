@@ -1,0 +1,16 @@
+<app-divider>
+  <div class="ui header">Modals .. Component !</div>
+</app-divider>
+
+<button class="ui positive button" (click)="onclick()">show Modal</button>
+<app-modal *ngIf="openModal" (close)="onclick()">
+  <div modalTitle>Modal title</div>
+  <div>
+    <p>Modal Element Which Can be reusable</p>
+  </div>
+  <div buttonn class="ui center mt-3">
+      <button class="ui positive  button" (click)="onclick()">CLOSE IT ! </button>
+
+  </div> 
+</app-modal>
+<!-- |||||||||||| -->

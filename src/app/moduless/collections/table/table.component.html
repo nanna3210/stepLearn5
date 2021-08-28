@@ -1,0 +1,40 @@
+<!-- <table class="ui table">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers">
+                {{header.label}}
+            </th>
+        </tr>
+    </thead>
+</table> -->
+
+<table [ngClass]='classNames' class="ui  striped table">
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers" >
+                <div class="ui  button negative">{{header.label}}</div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataEach of data">
+            <td *ngFor="let header of headers">
+
+                
+                    {{dataEach[header.key]}}
+                
+                
+                    
+                
+            </td>
+            <!-- <td>{{dataEach.name}}</td>
+            
+            <td>{{dataEach.age}}</td>
+            <td>{{dataEach.job}}</td> -->
+        </tr>
+
+    </tbody>
+
+</table>
+
+<!-- <router-outlet></router-outlet> -->

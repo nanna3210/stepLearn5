@@ -8,6 +8,14 @@ import { CardComponent } from './components/card/card.component';
 import { KilometerPipe } from './pipe/kilometer.pipe';
 import { ClaassDirective } from './claass.directive';
 import { TimesDirective } from './structuralDir/times.directive';
+import { RouterModule } from '@angular/router';
+// import { ElementsModule } from './moduless/elements/elements.module';
+import { AppRoutingModule } from './app-routing.module';
+// import { CollectionsModule } from './moduless/collections/collections.module';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+// import { BiographyComponent } from './collections/biography/biography.component';
+
 
 
 
@@ -17,13 +25,22 @@ import { TimesDirective } from './structuralDir/times.directive';
     CardComponent,
     KilometerPipe,
     ClaassDirective,
-    TimesDirective
+    TimesDirective,
+    HomeComponent,
+    NotFoundComponent
+    
+
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+    // ElementsModule, 
+    // CollectionsModule,
+    // CollectionsModule, 
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

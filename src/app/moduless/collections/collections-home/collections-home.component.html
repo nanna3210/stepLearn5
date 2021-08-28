@@ -1,0 +1,17 @@
+<app-divider>
+  <div class="ui header">Table Component !</div>
+</app-divider>
+<app-table [headers]="headers" [data]="data" classNames="inverted"></app-table>
+
+<app-tabs>
+  <a
+    routerLink="./"
+    routerLinkActive="active linkActive "
+    class="item"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Bio graphy
+  </a>
+  <a routerLink="companies" routerLinkActive="active" class="item">Companies</a>
+  <a routerLink="partners" routerLinkActive="active" class="item">Partners</a>
+</app-tabs>

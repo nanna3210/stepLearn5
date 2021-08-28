@@ -3,7 +3,8 @@
 /* @import 'bulma/css/bulma.css';  */
 /* E:\wev_dev\angular pr\first-angular-app\node_modules\bootstrap\dist\css\bootstrap.min.css */
 @import 'bootstrap/dist/css/bootstrap.min.css'; 
+@import 'semantic-ui-css/semantic.min.css';
+/* E:\wev_dev\angular pr\first-angular-app\node_modules\semantic-ui-css */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-

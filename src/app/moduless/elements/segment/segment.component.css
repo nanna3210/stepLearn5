@@ -1,0 +1,10 @@
+.nannaRed { 
+    color: rgb(245, 29, 29);
+}
+div.ui.icon.header:empty {
+
+    display: none;
+}
+.ui.icon.header:empty {
+    display: none;
+}
